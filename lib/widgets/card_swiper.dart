@@ -34,7 +34,7 @@ class CardSwiper extends StatelessWidget {
               Navigator.pushNamed(
                 context,
                 'details',
-                arguments: 'movie-instance',
+                arguments: movie,
               );
             },
             child: FadeInImage(

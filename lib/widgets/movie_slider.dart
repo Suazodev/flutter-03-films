@@ -14,7 +14,7 @@ class MovieSlider extends StatefulWidget {
 }
 
 class _MovieSliderState extends State<MovieSlider> {
-  final ScrollController scrollController = new ScrollController();
+  final ScrollController scrollController = ScrollController();
   @override
   void initState() {
     super.initState();
@@ -74,7 +74,6 @@ class _MoviePoster extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(movie);
     return Container(
       height: 190,
       width: 130,
@@ -85,7 +84,7 @@ class _MoviePoster extends StatelessWidget {
             onTap: () => Navigator.pushNamed(
               context,
               'details',
-              arguments: 'movie-instance',
+              arguments: movie,
             ),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),

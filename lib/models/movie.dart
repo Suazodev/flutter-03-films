@@ -37,7 +37,12 @@ class Movie {
     return posterPath != null
         ? 'https://image.tmdb.org/t/p/w500$posterPath'
         : 'https://www.freeiconspng.com/uploads/no-image-icon-6.png';
-    // return "https://image.tmdb.org/t/p/w500${posterPath ?? 'https://i.stack.imgur.com/GNhxO.png'}";
+  }
+
+  get getFullBackdropPath {
+    return posterPath != null
+        ? 'https://image.tmdb.org/t/p/w500$backdropPath'
+        : 'https://www.freeiconspng.com/uploads/no-image-icon-6.png';
   }
 
   factory Movie.fromJson(String str) => Movie.fromMap(json.decode(str));
