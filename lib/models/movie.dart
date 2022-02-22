@@ -40,7 +40,7 @@ class Movie {
   }
 
   get getFullBackdropPath {
-    return posterPath != null
+    return backdropPath != null
         ? 'https://image.tmdb.org/t/p/w500$backdropPath'
         : 'https://www.freeiconspng.com/uploads/no-image-icon-6.png';
   }
